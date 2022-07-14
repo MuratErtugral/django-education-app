@@ -1,12 +1,13 @@
 from django.urls import path
-from .views import user_login, user_register, user_dashboard, user_logout, enroll_the_course, release_the_course
+from . import views
+
 
 urlpatterns = [
-    path('login/', user_login, name = "login"),
-    path('register/', user_register, name = "register"),
-    path('dashboard/', user_dashboard, name = "dashboard"),
-    path('logout/', user_logout, name = "logout"),
-    path('enroll_the_course/', enroll_the_course, name = "enroll_the_course"),
-    path('release_the_course/', release_the_course, name = "release_the_course"),
+    path('login/', views.user_login, name="login"),
+    path('register/', views.user_register, name="register"),
+    path('dashboard/', views.user_dashboard, name="dashboard"),
+    path('logout/', views.user_logout, name="logout"),
+    path('enroll_the_course/', views.enroll_the_course, name="enroll_the_course"),
+    path('release_the_course/', views.release_the_course, name="release_the_course"),
 
 ]

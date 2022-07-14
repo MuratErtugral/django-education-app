@@ -1,5 +1,3 @@
-from calendar import c
-from re import A
 from django.shortcuts import render, redirect
 from . forms import LoginForm, RegisterForm
 from django.contrib.auth import authenticate, login, logout
@@ -80,5 +78,4 @@ def release_the_course(request):
     course = Course.objects.get(id = request.POST['course_id'])
     user = User.objects.get(id = request.POST['user_id'])
     course.students.remove(user)
-    return redirect('dashboard')  
-
+    return redirect('dashboard')

@@ -1,4 +1,5 @@
 """smartedu URL Configuration
+
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
@@ -24,5 +25,5 @@ urlpatterns = [
     path('courses/', include('courses.urls')),
     path('teachers/', include('teachers.urls')),
     path('accounts/', include('accounts.urls')),
-    
-]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

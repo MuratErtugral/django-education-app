@@ -4,7 +4,7 @@ class Teacher(models.Model):
     name = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     description = models.TextField(blank=True)
-    image = models.ImageField(upload_to= "media/%Y %m %d/")
+    image = models.ImageField(upload_to="courses/%Y/%m/%d/")
     facebook = models.URLField(max_length=100, blank=True)
     twitter = models.URLField(max_length=100, blank=True)
     linkedin = models.URLField(max_length=100, blank=True)
@@ -12,3 +12,4 @@ class Teacher(models.Model):
 
     def __str__(self):
         return self.name
+
